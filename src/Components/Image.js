@@ -1,9 +1,13 @@
-import React from "react";
+import React from 'react';
 
 function Image(props) {
-    const {src}= props;
-    <>
-    return <img src ={src.url} alt="Nasa A space view!"/>;
-    </>
-}
-export default Image;
+
+    return (
+        <div className = 'image'>
+        <img src={props.source} alt='NASA APOD'  ></img>
+        </div>
+    )
+    
+    }
+    
+    export default Image;

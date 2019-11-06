@@ -1,12 +1,12 @@
 import React from "react";
 
 function Date(props) {
-    const {dateTime, nightTime, moonWalking} =props;
 
     return (
-        <time dateTime = {dateTime} time nightTime = {nightTime}>
-            {moonWalking}
-        </time>
+        <div className='date'>
+            <h3>{props.date}</h3>
+        </div>
     );
-}
+    }
+
 export default Date;

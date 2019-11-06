@@ -1,8 +1,11 @@
 import React from "react";
 
 function Text(props) {
-    const {spaceshuttle, ...spaceMoving} = props;
 
-    return < p {...spaceMoving}>{spaceShuttle}</p>;
-}
+    return (
+        <div className='text'>
+            <p>{props.text}</p>
+        </div>
+    );
+    }
 export default Text;
