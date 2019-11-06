@@ -7,14 +7,12 @@ import Image from "../src/Components/Image";
 import Text from "../src/Components/Text";
 import Date from "../src/Components/Date";
 
-import Styles from "../src/Display/Styles";
-
-
 
 
 
 function App() {
 
+  
 
   const[title, setTitle] = useState("");
   const[image, setImage] = useState("");
@@ -27,7 +25,7 @@ function App() {
     .get("https://api.nasa.gov/planetary/apod?api_key=cVRQJwQRtcNt44mUbf7WnUTJpxm9DahGjBGkoTut")
     .then(response => {
       setTitle(response.data.title);
-      setImage(response.data.imgurl);
+      setImage(response.data.img);
       setText(response.data.text);
       setDate(response.data.date);
       console.log(response.data);
@@ -42,19 +40,20 @@ function App() {
   
   return (
     <div className="App">
-      <h2>Nasa photo of the day</h2>
-      <Container>
-        <ImageContainer>
-          < Image image={image} />
-        </ImageContainer>
-        <TextContainer>
-          <Title title={title.title}/>
-          <Date date={date}/>
-        </TextContainer>
-      </Container>
+      <div className= "title">
+      <Title>Nasa the last space frontier</Title>
+      </div>
+      <div className="image">
+        <Image image={image} alt='NASA APOD'></Image>
+      </div>
+      <div className = "text">
+      <Text text={text}/>
+      </div>
+      <div className = "date">
+      <Date date={date}></Date>
+      </div>
     </div>
   );
 }
-
 
 export default App;

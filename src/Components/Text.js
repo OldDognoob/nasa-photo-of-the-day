@@ -4,7 +4,7 @@ function Text(props) {
 
     return (
         <div className='text'>
-            <p>{props.text}</p>
+            <p>Space moonWalking,{props.text}</p>;
         </div>
     );
     }
