@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <div className= "title">
-      <Title>Nasa the last space frontier</Title>
+      <Title title={title}/>
       </div>
       <div className="image">
         <Image image={image} alt='NASA APOD'></Image>
