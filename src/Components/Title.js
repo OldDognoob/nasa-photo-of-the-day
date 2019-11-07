@@ -4,11 +4,11 @@ function Title(props) {
 
     return (
         <div className='title'>
-            <h2>Nasa the last space frontier, {props.title}</h2>;
+            <h2> {props.title}</h2>
         </div>
     );
     }
     
-    export default Title;
+    export default Title
     
   

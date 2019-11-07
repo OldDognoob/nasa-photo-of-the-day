@@ -1,19 +1,24 @@
-import React from 'react';
+import React from "react";
+import styled from 'styled-components';
 
-import logo from "../Img/main_image.jpg";
+function NasaImage(props) {
+  return (
+    <ImageDiv>
+      <img src={props.image} alt="NASA POD"></img>
+    </ImageDiv>
+  );
+}
 
-console.log(logo);
+export default NasaImage
 
-function Image(props) {
-
-    return (
-        <div className = 'image'>
-        <img src={logo} alt='NASA APOD'  ></img>;
-        </div>
-    )
-    
+const ImageDiv = styled.div`
+  img {
+    max-width: 700px;
+    border: solid 2px white;
+    @media(max-width: 500px){
+      max-width: 100%;
     }
-    
-    export default Image;
+  }
+`;
 
    
