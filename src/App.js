@@ -51,7 +51,7 @@ function App() {
   
   
   return (
-    <body>
+    <Body>
     <div className="App">
       <H1>
       <Title title={title}/>
@@ -59,15 +59,15 @@ function App() {
       <div className="image">
         <Image image={image} alt='NASA APOD'></Image>
       </div>
-      <p>
+      <P>
       <Description text={description}/>
-      </p>
-      <h3>
+      </P>
+      <H3>
       <Date date={date}/>
-      </h3>
+      </H3>
       <Copyright copyright={copyright}/>
     </div>
-    </body>
+    </Body>
   );
 }
 
@@ -75,10 +75,10 @@ export default App;
 
 
 const H1 = styled.h1`
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   @media(max-width: 500px){
-    font-size: 3rem;
+    
   }  
 `;
 
@@ -86,7 +86,7 @@ const Body = styled.div`
   width: 85%;
   border: solid 2px white;
   border-radius: 20px;
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
   align-items: flex-start;
   @media(max-width: 500px){
@@ -104,18 +104,12 @@ const Body = styled.div`
    }
  `;
  
-  const ImageStyle = styled.div`
-  width: 75%;
-  padding-left: 3%;
-  @media(max-width: 500px){
-    margin: 0 auto;
-    padding-left: initial;
-  }
-  `;
-
-  const p = styled.div`
-    font-size: 4rem;
-    margin-bottom: 4rem;
-    text-align: center
+ 
+  const P = styled.div`
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.8;
+    padding: 0px 40px;
   
   `;
