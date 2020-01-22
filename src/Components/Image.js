@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function NasaImage(props) {
   return (
     <ImageDiv>
-      <img src={props.image} alt="NASA POD"></img>
+      <img src={props.image} alt="NASA APOD"></img>
     </ImageDiv>
   );
 }

@@ -8,6 +8,7 @@ import axios from "axios";
 // FROM COMPONENTS FOLDER
 import Title from "../src/Components/Title";
 import Image from "../src/Components/Image";
+// import ImageInfoContainer from './Components/ImageInfoContainer';
 import Description from "../src/Components/Description";
 import Date from "../src/Components/Date";
 import Copyright from "../src/Components/Copyright";
@@ -33,7 +34,7 @@ function App() {
 
   useEffect(() => {
     axios
-    .get("https://api.nasa.gov/planetary/apod?api_key=cVRQJwQRtcNt44mUbf7WnUTJpxm9DahGjBGkoTut")
+    .get("https://api.nasa.gov/planetary/apod?api_key=1lcdWafxjhVUB8Epio86q1iXiyidsFPzXzpSqFkx")
     .then(response => {
       setTitle(response.data.title);
       setImage(response.data.url);
@@ -57,7 +58,7 @@ function App() {
       <Title title={title}/>
       </H1>
       <div className="image">
-        <Image image={image} alt='NASA APOD'></Image>
+        <Image image={image} alt='NASA POD'></Image>
       </div>
       <P>
       <Description text={description}/>
