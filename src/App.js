@@ -19,6 +19,8 @@ import styled from 'styled-components';
 
 
 
+
+
 function App() {
 
   // SET DECLARATION
@@ -90,6 +92,9 @@ const Body = styled.div`
   margin: 50px auto;
   display: flex;
   align-items: flex-start;
+  background:url("https://media.giphy.com/media/fw2RewLoHMUBW/giphy.gif");
+  background:
+  
   @media(max-width: 500px){
     flex-direction: column;
   }
@@ -100,6 +105,7 @@ const Body = styled.div`
    align-content: center;
    padding-top: 5%;
    padding-bottom: 5%;
+   color:#44A08D;
    @media(max-width: 500px){
     padding-left: initial;
    }
@@ -112,5 +118,8 @@ const Body = styled.div`
     text-align: center;
     line-height: 1.8;
     padding: 0px 40px;
+    width: 95%;
+    color: #FF0099;
+
   
   `;

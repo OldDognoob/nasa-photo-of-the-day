@@ -16,10 +16,20 @@
 import React from "react";
 import styled from "styled-components";
 
+
+
+
 const H1 = styled.h1`
   font-size: 25px;
+  margin-top: 50px;
   text-align: center;
   color: black;
+  background:#ada996;
+  
+
+  &:hover {
+    transform:scale(1.5)
+  }
 `;
 
 const ImageTitle = props =>{
