@@ -15,7 +15,10 @@ import Copyright from "../src/Components/Copyright";
 
 
 // IMPORT STYLES
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import {gsap} from "gsap";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+
 
 
 
@@ -65,12 +68,18 @@ function App() {
       <P>
       <Description text={description}/>
       </P>
-      <H3>
+      <H3 className="date">
       <Date date={date}/>
       </H3>
+      <FadeInDiv className="copyright">
       <Copyright copyright={copyright}/>
+      </FadeInDiv>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+      <Rotate>&lt; 💅 &gt;</Rotate>
     </div>
+  
     </Body>
+    
   );
 }
 
@@ -92,8 +101,11 @@ const Body = styled.div`
   margin: 50px auto;
   display: flex;
   align-items: flex-start;
-  background:url("https://media.giphy.com/media/fw2RewLoHMUBW/giphy.gif");
-  background:
+  color: ${props => props.night ? 'red' : 'blue'};
+  background:url("https://media.giphy.com/media/3ov9k1173PdfJWRsoE/giphy.gif");
+ 
+ 
+  
   
   @media(max-width: 500px){
     flex-direction: column;
@@ -105,10 +117,18 @@ const Body = styled.div`
    align-content: center;
    padding-top: 5%;
    padding-bottom: 5%;
-   color:#44A08D;
+   color: ${props => props.inputColor || "#44A08D"};
+    border: none;
+    border-radius: 3px;
+    &:hover {
+     transform: scale(2);
+  }
+
    @media(max-width: 500px){
     padding-left: initial;
    }
+
+   
  `;
  
  
@@ -116,6 +136,7 @@ const Body = styled.div`
     font-size: 1.4rem;
     margin-bottom: 1rem;
     text-align: center;
+    align-items: center;
     line-height: 1.8;
     padding: 0px 40px;
     width: 95%;
@@ -123,3 +144,35 @@ const Body = styled.div`
 
   
   `;
+
+const  fadeIn =keyframes`
+0% {
+  opacity:1.1;
+}
+100%{
+  opacity: 5.1;
+}
+`;
+
+const FadeInDiv =styled.div`
+animation: 3s ${fadeIn} ease-out;
+
+
+`;
+
+const rotate = keyframes`
+from {
+  transform rotate(0deg);
+}
+to {
+  transform rotate(360deg);
+}
+
+`;
+
+const Rotate = styled.div`
+display: inline-block;
+animation: ${rotate} 2s linear infinite;
+padding: 2rem 1rem;
+font-size: 1.2rem
+`;

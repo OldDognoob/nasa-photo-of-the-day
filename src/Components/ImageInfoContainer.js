@@ -9,6 +9,9 @@ const DateContainer = styled.div`
     position: fixed;
     top: 50px;
     left: 50px;
+    padding: 0.5em;
+    margin: 0.5em;
+   
 `;
 
 const Destination = styled.h2`
