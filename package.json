@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.4.1",
+    "gsap": "^3.0.5",
+    "react": "^16.11.0",
+    "react-background-slideshow": "^1.0.4",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "reactstrap": "^8.4.0",
+    "sound": "^2.6.1",
+    "styled-components": "^4.4.1",
+    "styled-theming": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
